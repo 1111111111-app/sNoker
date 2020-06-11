@@ -8,8 +8,8 @@
 
     <EditText
         android:id="@+id/timeSmokeText"
-        android:layout_width="100dp"
-        android:layout_height="43dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -24,7 +24,7 @@
         android:text="한 번 필때, 보통 얼마 동안 피시나요?"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/introText"
-        app:layout_constraintTop_toBottomOf="@+id/countSmoke" />
+        app:layout_constraintTop_toBottomOf="@+id/countSmokeText" />
 
     <TextView
         android:id="@+id/questionSmokeCount"
@@ -84,9 +84,9 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/countSmoke"
-        android:layout_width="100dp"
-        android:layout_height="43dp"
+        android:id="@+id/countSmokeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:ems="10"
         android:inputType="textPersonName"
