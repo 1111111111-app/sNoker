@@ -5,6 +5,7 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import kotlinx.android.synthetic.main.activity_intro.*
 import kotlinx.android.synthetic.main.activity_user_register.*
 
@@ -27,9 +28,7 @@ class UserRegisterActivity : AppCompatActivity() {
             override fun onClick(view: View?) {
                view!!.setSelected(!view.isSelected())
 
-                if(view.isSelected())
-                    if(femaleButton.isSelected())
-                        femaleButton.callOnClick()
+                callOnClick(view, femaleButton)
             }
         })
 
@@ -37,12 +36,16 @@ class UserRegisterActivity : AppCompatActivity() {
             override fun onClick(view: View?) {
                 view!!.setSelected(!view.isSelected())
 
-                if(view.isSelected())
-                    if(maleButton.isSelected())
-                        maleButton.callOnClick()
+                callOnClick(view, maleButton)
             }
         })
 
+    }
+
+    private fun callOnClick(view: View?, button: Button?) {
+        if(view!!.isSelected())
+            if(button!!.isSelected())
+                button.callOnClick()
     }
 
 }
