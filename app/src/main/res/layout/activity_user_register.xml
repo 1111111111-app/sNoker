@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserRegisterActivity">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="금연 안합니다!!!!!"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/introText"
+        app:layout_constraintTop_toBottomOf="@+id/questionSmokeStart" />
+
+    <TextView
+        android:id="@+id/questionSmokeStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="금연을 시작한 날을 알려주세요."
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/introText"
+        app:layout_constraintTop_toBottomOf="@+id/maleButton" />
+
+    <Button
+        android:id="@+id/femaleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/selector_button"
+        android:text="여성"
+        app:layout_constraintStart_toEndOf="@+id/maleButton"
+        app:layout_constraintTop_toBottomOf="@+id/questionGender" />
+
+    <Button
+        android:id="@+id/maleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/selector_button"
+        android:text="남성"
+        app:layout_constraintStart_toStartOf="@+id/introText"
+        app:layout_constraintTop_toBottomOf="@+id/questionGender" />
+
+    <TextView
+        android:id="@+id/questionGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="당신의 성별은요?"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/introText"
+        app:layout_constraintTop_toBottomOf="@+id/tempBirthDay" />
+
+    <TextView
+        android:id="@+id/tempBirthDay"
+        android:layout_width="300dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="24dp"
+        android:gravity="start|center_vertical"
+        android:text="1994. 08. 06"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/introText"
+        app:layout_constraintTop_toBottomOf="@+id/questionBirthDay" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="#D38ADF"
+        android:text="다음 단계로"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/questionBirthDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="생일을 알려주세요."
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/introText"
+        app:layout_constraintTop_toBottomOf="@+id/introText" />
+
+    <TextView
+        android:id="@+id/introText"
+        android:layout_width="342dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="80dp"
+        android:background="@android:drawable/spinner_dropdown_background"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="당신에 대해서 알고 싶어요. \n간단하게 알려주세요."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
