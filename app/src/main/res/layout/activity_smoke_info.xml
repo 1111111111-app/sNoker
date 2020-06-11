@@ -6,14 +6,90 @@
     android:layout_height="match_parent"
     tools:context=".SmokeInfoActivity">
 
+    <EditText
+        android:id="@+id/timeSmokeText"
+        android:layout_width="100dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/introText"
+        app:layout_constraintTop_toBottomOf="@+id/questionSmokeTime" />
+
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/questionSmokeTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="준비중...."
-        android:textSize="30sp"
+        android:layout_marginTop="24dp"
+        android:text="한 번 필때, 보통 얼마 동안 피시나요?"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/introText"
+        app:layout_constraintTop_toBottomOf="@+id/countSmoke" />
+
+    <TextView
+        android:id="@+id/questionSmokeCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="평소에 하루 흡연은 얼마나 하셨나요?"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/introText"
+        app:layout_constraintTop_toBottomOf="@+id/tempSmokeStart" />
+
+    <TextView
+        android:id="@+id/tempSmokeStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="2020년 06월 11일"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/introText"
+        app:layout_constraintTop_toBottomOf="@+id/questionSmokeStart" />
+
+    <TextView
+        android:id="@+id/questionSmokeStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="흡연을 시작했던 날을 알려주세요."
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/introText"
+        app:layout_constraintTop_toBottomOf="@+id/introText" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="#D38ADF"
+        android:text="전부 적었어요"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/introText"
+        android:layout_width="342dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="80dp"
+        android:background="@android:drawable/spinner_dropdown_background"
+        android:gravity="center"
+        android:text="마지막이에요.\n저에게 과거를 알려주세요!"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/countSmoke"
+        android:layout_width="100dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/introText"
+        app:layout_constraintTop_toBottomOf="@+id/questionSmokeCount" />
 </androidx.constraintlayout.widget.ConstraintLayout>

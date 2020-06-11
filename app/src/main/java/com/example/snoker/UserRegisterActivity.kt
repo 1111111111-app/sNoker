@@ -9,6 +9,9 @@ import kotlinx.android.synthetic.main.activity_intro.*
 import kotlinx.android.synthetic.main.activity_user_register.*
 
 class UserRegisterActivity : AppCompatActivity() {
+
+    private val isCompleteRegister : Boolean = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_register)
@@ -20,6 +23,7 @@ class UserRegisterActivity : AppCompatActivity() {
         }
 
         maleButton.setOnClickListener(object: View.OnClickListener {
+
             override fun onClick(view: View?) {
                view!!.setSelected(!view.isSelected())
 
@@ -38,8 +42,7 @@ class UserRegisterActivity : AppCompatActivity() {
                         maleButton.callOnClick()
             }
         })
-//
-//
+
     }
 
 }
