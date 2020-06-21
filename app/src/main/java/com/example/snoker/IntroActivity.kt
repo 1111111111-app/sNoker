@@ -11,12 +11,16 @@ class IntroActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_intro)
 
-        transformFullScreen()
-
-        startButton.setOnClickListener { view ->
+        nextButton.setOnClickListener { view ->
             val intent = Intent(applicationContext, UserRegisterActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        transformFullScreen()
     }
 
     private fun transformFullScreen() {
