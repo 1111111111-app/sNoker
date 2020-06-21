@@ -35,7 +35,7 @@
 
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/highlightImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="38dp"
@@ -53,9 +53,9 @@
             android:textColor="#3c3c3c"
             android:letterSpacing="0.02"
             android:gravity="center_horizontal"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-            app:layout_constraintEnd_toEndOf="@+id/imageView2"
-            app:layout_constraintStart_toStartOf="@+id/imageView2" />
+            app:layout_constraintBottom_toBottomOf="@+id/highlightImage"
+            app:layout_constraintEnd_toEndOf="@+id/highlightImage"
+            app:layout_constraintStart_toStartOf="@+id/highlightImage" />
 
         <TextView
             android:id="@+id/mainText"

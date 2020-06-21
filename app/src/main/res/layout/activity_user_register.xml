@@ -4,7 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f4f4f4"
     tools:context=".UserRegisterActivity">
+
+    <ImageView
+        android:id="@+id/inActiveImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="187dp"
+        android:layout_marginLeft="187dp"
+        android:layout_marginEnd="166dp"
+        android:layout_marginRight="166dp"
+        app:layout_constraintBottom_toBottomOf="@+id/activeImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/inactive" />
+
+    <ImageView
+        android:id="@+id/activeImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="168dp"
+        android:layout_marginLeft="168dp"
+        android:layout_marginEnd="185dp"
+        android:layout_marginRight="185dp"
+        app:layout_constraintBottom_toTopOf="@+id/introText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/active" />
 
     <TextView
         android:id="@+id/textView6"
@@ -71,15 +98,14 @@
 
     <Button
         android:id="@+id/nextButton"
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginBottom="32dp"
-        android:background="#D38ADF"
-        android:text="다음 단계로"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="63dp"
+        android:background="@drawable/btn_next_2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -88,21 +114,33 @@
         android:id="@+id/questionBirthDay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:fontFamily="@font/noto_sans_kr_medium"
+        android:letterSpacing="-0.06"
         android:text="생일을 알려주세요."
-        android:textSize="16sp"
+        android:textColor="#3c3c3c"
+        android:textSize="17sp"
         app:layout_constraintStart_toStartOf="@+id/introText"
         app:layout_constraintTop_toBottomOf="@+id/introText" />
 
     <TextView
         android:id="@+id/introText"
-        android:layout_width="342dp"
-        android:layout_height="93dp"
-        android:layout_marginTop="80dp"
-        android:background="@android:drawable/spinner_dropdown_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/text_bg"
+        android:fontFamily="@font/noto_sans_kr_medium"
         android:gravity="center"
         android:includeFontPadding="false"
+        android:letterSpacing="-0.06"
         android:text="당신에 대해서 알고 싶어요. \n간단하게 알려주세요."
+        android:textColor="#3c3c3c"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
