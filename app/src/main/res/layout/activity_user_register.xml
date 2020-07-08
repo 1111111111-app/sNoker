@@ -33,23 +33,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/active" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="금연 안합니다!!!!!"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/introText"
-        app:layout_constraintTop_toBottomOf="@+id/questionSmokeEnd" />
 
     <TextView
         android:id="@+id/questionSmokeEnd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/noto_sans_kr_medium"
+        android:letterSpacing="-0.06"
         android:text="금연을 시작한 날을 알려주세요."
-        android:textSize="16sp"
+        android:textColor="#3c3c3c"
+        android:textSize="17sp"
         app:layout_constraintStart_toStartOf="@+id/introText"
         app:layout_constraintTop_toBottomOf="@+id/maleButton" />
 
@@ -57,11 +53,15 @@
         android:id="@+id/femaleButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/selector_button"
+        android:letterSpacing="-0.06"
         android:text="여성"
+        android:textColor="@drawable/selector_text"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/maleButton"
         app:layout_constraintTop_toBottomOf="@+id/questionGender" />
 
@@ -69,46 +69,206 @@
         android:id="@+id/maleButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/selector_button"
+        android:letterSpacing="-0.06"
         android:text="남성"
+        android:textColor="@drawable/selector_text"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/introText"
         app:layout_constraintTop_toBottomOf="@+id/questionGender" />
+    <TextView
+        android:id="@+id/noSmokeYear"
+        style="@style/yearStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/noSmokeYearText"
+        app:layout_constraintStart_toEndOf="@+id/noSmokeYearText"
+        app:layout_constraintTop_toTopOf="@+id/noSmokeYearText" />
+
+    <TextView
+        android:id="@+id/noSmokeMonth"
+        style="@style/monthStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/noSmokeMonthText"
+        app:layout_constraintStart_toEndOf="@+id/noSmokeMonthText"
+        app:layout_constraintTop_toTopOf="@+id/noSmokeMonthText" />
+    <TextView
+        android:id="@+id/noSmokeDay"
+        style="@style/dayStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/noSmokeDayText"
+        app:layout_constraintStart_toEndOf="@+id/noSmokeDayText"
+        app:layout_constraintTop_toTopOf="@+id/noSmokeDayText" />
+
+    <TextView
+        android:id="@+id/noSmokeHour"
+        style="@style/hourStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/noSmokeHourText"
+        app:layout_constraintStart_toEndOf="@+id/noSmokeHourText"
+        app:layout_constraintTop_toTopOf="@+id/noSmokeHourText" />
+
+    <TextView
+        android:id="@+id/noSmokeYearText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/input"
+        style="@style/dialogStyle"
+        app:layout_constraintStart_toStartOf="@+id/introText"
+        app:layout_constraintTop_toBottomOf="@+id/questionSmokeEnd" />
+
+    <TextView
+        android:id="@+id/noSmokeMonthText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/input_2"
+        style="@style/dialogStyle"
+        app:layout_constraintStart_toEndOf="@+id/birthdayYear"
+        app:layout_constraintTop_toBottomOf="@+id/questionSmokeEnd" />
+
+    <TextView
+        android:id="@+id/noSmokeDayText"
+        style="@style/dialogStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/input_3"
+        app:layout_constraintStart_toEndOf="@+id/birthdayMonth"
+        app:layout_constraintTop_toBottomOf="@+id/questionSmokeEnd" />
+
+    <TextView
+        android:id="@+id/noSmokeHourText"
+        style="@style/dialogStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/input_3"
+        app:layout_constraintStart_toEndOf="@+id/noSmokeDay"
+        app:layout_constraintTop_toBottomOf="@+id/questionSmokeEnd" />
+
+    <TextView
+        android:id="@+id/birthdayYear"
+        style="@style/yearStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/birthdayYearText"
+        app:layout_constraintStart_toEndOf="@+id/birthdayYearText"
+        app:layout_constraintTop_toTopOf="@+id/birthdayYearText" />
+
+    <TextView
+        android:id="@+id/birthdayMonth"
+        style="@style/monthStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/birthdayMonthText"
+        app:layout_constraintStart_toEndOf="@+id/birthdayMonthText"
+        app:layout_constraintTop_toTopOf="@+id/birthdayMonthText" />
+    <TextView
+        android:id="@+id/birthdayDay"
+        style="@style/dayStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/birthdayDayText"
+        app:layout_constraintStart_toEndOf="@+id/birthdayDayText"
+        app:layout_constraintTop_toTopOf="@+id/birthdayDayText" />
+
+    <TextView
+        android:id="@+id/birthdayYearText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/input"
+        style="@style/dialogStyle"
+        app:layout_constraintStart_toStartOf="@+id/introText"
+        app:layout_constraintTop_toBottomOf="@+id/questionBirthDay" />
+
+    <TextView
+        android:id="@+id/birthdayMonthText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/input_2"
+        style="@style/dialogStyle"
+        app:layout_constraintStart_toEndOf="@+id/birthdayYear"
+        app:layout_constraintTop_toBottomOf="@+id/questionBirthDay" />
+
+    <TextView
+        android:id="@+id/birthdayDayText"
+        style="@style/dialogStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/input_3"
+        app:layout_constraintStart_toEndOf="@+id/birthdayMonth"
+        app:layout_constraintTop_toBottomOf="@+id/questionBirthDay" />
 
     <TextView
         android:id="@+id/questionGender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/noto_sans_kr_medium"
+        android:letterSpacing="-0.06"
         android:text="당신의 성별은요?"
-        android:textSize="16sp"
+        android:textColor="#3c3c3c"
+        android:textSize="17sp"
         app:layout_constraintStart_toStartOf="@+id/introText"
-        app:layout_constraintTop_toBottomOf="@+id/tempBirthDay" />
-
-    <TextView
-        android:id="@+id/tempBirthDay"
-        android:layout_width="300dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="24dp"
-        android:gravity="start|center_vertical"
-        android:text="1994. 08. 06"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/introText"
-        app:layout_constraintTop_toBottomOf="@+id/questionBirthDay" />
+        app:layout_constraintTop_toBottomOf="@+id/birthdayYearText" />
 
     <Button
         android:id="@+id/nextButton"
-        android:layout_height="wrap_content"
         android:layout_width="match_parent"
+        android:layout_height="67dp"
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
+        android:layout_marginTop="70dp"
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
-        android:layout_marginBottom="63dp"
+        android:layout_marginBottom="50dp"
         android:background="@drawable/btn_next_2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/noSmokeDayText" />
 
     <TextView
         android:id="@+id/questionBirthDay"

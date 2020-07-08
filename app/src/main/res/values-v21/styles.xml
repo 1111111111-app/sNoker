@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="dialogStyle">
+        <item name="android:text">선택</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">#a1a1a1</item>
+        <item name="android:fontFamily">@font/noto_sans_kr_regular</item>
+    </style>
+</resources>
