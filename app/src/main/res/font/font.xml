@@ -9,4 +9,9 @@
         android:fontStyle="normal"
         android:fontWeight="300"
         android:font = "@font/noto_sans_kr_light"/>
+
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="300"
+        android:font = "@font/noto_sans_kr_regular"/>
 </font-family>

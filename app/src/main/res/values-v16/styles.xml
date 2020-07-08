@@ -1,31 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
-
-    <style name="buttonSelected">
-        <item name="android:textSize">14sp</item>
-        <item name="android:gravity">center_horizontal</item>
-        <item name="android:textColor">#ffffff</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="buttonUnSelected">
-        <item name="android:textSize">14sp</item>
-        <item name="android:gravity">center_horizontal</item>
-        <item name="android:textColor">#a1a1a1</item>
-        <item name="android:textStyle">bold</item>
-    </style>
 
     <style name="dialogStyle">
         <item name="android:text">선택</item>
         <item name="android:textSize">14sp</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="android:textColor">#a1a1a1</item>
+        <item name="android:fontFamily">@font/noto_sans_kr_regular</item>
     </style>
 
     <style name="yearStyle">
@@ -33,6 +14,7 @@
         <item name="android:textSize">14sp</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="android:textColor">#3c3c3c</item>
+        <item name="android:fontFamily">@font/noto_sans_kr_medium</item>
 
     </style>
 
@@ -41,6 +23,8 @@
         <item name="android:textSize">14sp</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="android:textColor">#3c3c3c</item>
+        <item name="android:fontFamily">@font/noto_sans_kr_medium</item>
+
     </style>
 
     <style name="dayStyle">
@@ -48,6 +32,8 @@
         <item name="android:textSize">14sp</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="android:textColor">#3c3c3c</item>
+        <item name="android:fontFamily">@font/noto_sans_kr_medium</item>
+
     </style>
 
     <style name="hourStyle">
@@ -55,6 +41,8 @@
         <item name="android:textSize">14sp</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="android:textColor">#3c3c3c</item>
+        <item name="android:fontFamily">@font/noto_sans_kr_medium</item>
+
     </style>
 
     <style name="minuteStyle">
@@ -62,5 +50,8 @@
         <item name="android:textSize">14sp</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="android:textColor">#3c3c3c</item>
+        <item name="android:fontFamily">@font/noto_sans_kr_medium</item>
+
     </style>
+
 </resources>
