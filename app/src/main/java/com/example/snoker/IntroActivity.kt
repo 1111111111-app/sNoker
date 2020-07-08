@@ -19,7 +19,6 @@ class IntroActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-
         transformFullScreen()
     }
 
