@@ -1,7 +1,8 @@
-package com.example.snoker
+package com.example.snoker.view.smokeinfo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.snoker.R
 
 class SmokeInfoActivity : AppCompatActivity() {
 
