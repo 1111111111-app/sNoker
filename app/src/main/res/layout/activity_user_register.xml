@@ -142,6 +142,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/input"
+            android:onClick="@{(view)->viewmodel.startSmokeDialog(view)}"
             app:layout_constraintStart_toStartOf="@+id/introText"
             app:layout_constraintTop_toBottomOf="@+id/questionSmokeEnd" />
 
@@ -153,6 +154,7 @@
             android:layout_marginStart="12dp"
             android:layout_marginLeft="12dp"
             android:background="@drawable/input_2"
+            android:onClick="@{(view)->viewmodel.startSmokeDialog(view)}"
             app:layout_constraintBottom_toBottomOf="@+id/noSmokeYearText"
             app:layout_constraintStart_toEndOf="@+id/birthdayYear"
             app:layout_constraintTop_toTopOf="@+id/noSmokeYearText" />
@@ -165,6 +167,7 @@
             android:layout_marginStart="13dp"
             android:layout_marginLeft="13dp"
             android:background="@drawable/input_3"
+            android:onClick="@{(view)->viewmodel.startSmokeDialog(view)}"
             app:layout_constraintBottom_toBottomOf="@+id/noSmokeMonthText"
             app:layout_constraintStart_toEndOf="@+id/birthdayMonth"
             app:layout_constraintTop_toTopOf="@+id/noSmokeMonthText" />
@@ -177,6 +180,7 @@
             android:layout_marginStart="13dp"
             android:layout_marginLeft="13dp"
             android:background="@drawable/input_3"
+            android:onClick="@{(view)->viewmodel.startSmokeDialog(view)}"
             app:layout_constraintBottom_toBottomOf="@+id/noSmokeDayText"
             app:layout_constraintStart_toEndOf="@+id/noSmokeDay"
             app:layout_constraintTop_toTopOf="@+id/noSmokeDayText" />
@@ -223,6 +227,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/input"
+            android:onClick="@{(view)->viewmodel.birthDayDialog(view)}"
             app:layout_constraintStart_toStartOf="@+id/introText"
             app:layout_constraintTop_toBottomOf="@+id/questionBirthDay" />
 
@@ -234,6 +239,7 @@
             android:layout_marginStart="13dp"
             android:layout_marginLeft="13dp"
             android:background="@drawable/input_2"
+            android:onClick="@{(view)->viewmodel.birthDayDialog(view)}"
             app:layout_constraintBottom_toBottomOf="@+id/birthdayYearText"
             app:layout_constraintStart_toEndOf="@+id/birthdayYear"
             app:layout_constraintTop_toTopOf="@+id/birthdayYearText" />
@@ -246,6 +252,7 @@
             android:layout_marginStart="13dp"
             android:layout_marginLeft="13dp"
             android:background="@drawable/input_3"
+            android:onClick="@{(view)->viewmodel.birthDayDialog(view)}"
             app:layout_constraintBottom_toBottomOf="@+id/birthdayYearText"
             app:layout_constraintStart_toEndOf="@+id/birthdayMonth"
             app:layout_constraintTop_toTopOf="@+id/birthdayYearText" />
