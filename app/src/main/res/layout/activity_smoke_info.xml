@@ -1,95 +1,278 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".view.smokeinfo.SmokeInfoActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <EditText
-        android:id="@+id/timeSmokeText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/introText"
-        app:layout_constraintTop_toBottomOf="@+id/questionSmokeTime" />
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.snoker.view.smokeinfo.SmokeInfoViewModel" />
+    </data>
 
-    <TextView
-        android:id="@+id/questionSmokeTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="한 번 필때, 보통 얼마 동안 피시나요?"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/introText"
-        app:layout_constraintTop_toBottomOf="@+id/countSmokeText" />
-
-    <TextView
-        android:id="@+id/questionSmokeCount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="평소에 하루 흡연은 얼마나 하셨나요?"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/introText"
-        app:layout_constraintTop_toBottomOf="@+id/tempSmokeStart" />
-
-    <TextView
-        android:id="@+id/tempSmokeStart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="2020년 06월 11일"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/introText"
-        app:layout_constraintTop_toBottomOf="@+id/questionSmokeStart" />
-
-    <TextView
-        android:id="@+id/questionSmokeStart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="흡연을 시작했던 날을 알려주세요."
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/introText"
-        app:layout_constraintTop_toBottomOf="@+id/introText" />
-
-    <Button
-        android:id="@+id/nextButton"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginBottom="32dp"
-        android:background="#D38ADF"
-        android:text="전부 적었어요"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_height="match_parent"
+        android:background="#f4f4f4"
+        tools:context=".SmokeInfoActivity">
 
-    <TextView
-        android:id="@+id/introText"
-        android:layout_width="342dp"
-        android:layout_height="93dp"
-        android:layout_marginTop="80dp"
-        android:background="@android:drawable/spinner_dropdown_background"
-        android:gravity="center"
-        android:text="마지막이에요.\n저에게 과거를 알려주세요!"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/countSmokeText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/introText"
-        app:layout_constraintTop_toBottomOf="@+id/questionSmokeCount" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/inActiveImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="187dp"
+            android:layout_marginLeft="187dp"
+            android:layout_marginEnd="166dp"
+            android:layout_marginRight="166dp"
+            app:layout_constraintBottom_toBottomOf="@+id/activeImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/inactive" />
+
+        <ImageView
+            android:id="@+id/activeImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="168dp"
+            android:layout_marginLeft="168dp"
+            android:layout_marginEnd="185dp"
+            android:layout_marginRight="185dp"
+            app:layout_constraintBottom_toTopOf="@+id/introText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/active" />
+
+        <TextView
+            android:id="@+id/introText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/text_bg"
+            android:fontFamily="@font/noto_sans_kr_medium"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.06"
+            android:text="마지막이에요. \n저에게 과거를 알려주세요!"
+            android:textColor="#3c3c3c"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/questionStartSmoke"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/noto_sans_kr_medium"
+            android:letterSpacing="-0.06"
+            android:text="흡연을 시작했던 날을 알려주세요."
+            android:textColor="#3c3c3c"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="@+id/introText"
+            app:layout_constraintTop_toBottomOf="@+id/introText" />
+        <TextView
+            android:id="@+id/startSmokeYearText"
+            style="@style/dialogStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/input"
+            android:text="@{viewmodel.startSmokeYear}"
+            android:onClick="@{(view)->viewmodel.startSmokeDialog(view)}"
+            app:layout_constraintStart_toStartOf="@+id/introText"
+            app:layout_constraintTop_toBottomOf="@+id/questionStartSmoke" />
+
+        <TextView
+            android:id="@+id/startSmokeYear"
+            style="@style/yearStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/startSmokeYearText"
+            app:layout_constraintStart_toEndOf="@+id/startSmokeYearText"
+            app:layout_constraintTop_toTopOf="@+id/startSmokeYearText" />
+
+        <TextView
+            android:id="@+id/startSmokeMonthText"
+            style="@style/dialogStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_marginLeft="13dp"
+            android:background="@drawable/input_2"
+            android:text="@{viewmodel.startSmokeMonth}"
+            android:onClick="@{(view)->viewmodel.startSmokeDialog(view)}"
+            app:layout_constraintBottom_toBottomOf="@+id/startSmokeYearText"
+            app:layout_constraintStart_toEndOf="@+id/startSmokeYear"
+            app:layout_constraintTop_toTopOf="@+id/startSmokeYearText" />
+
+        <TextView
+            android:id="@+id/startSmokeMonth"
+            style="@style/monthStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/startSmokeMonthText"
+            app:layout_constraintStart_toEndOf="@+id/startSmokeMonthText"
+            app:layout_constraintTop_toTopOf="@+id/startSmokeMonthText" />
+
+        <TextView
+            android:id="@+id/startSmokeDayText"
+            style="@style/dialogStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_marginLeft="13dp"
+            android:background="@drawable/input_3"
+            android:text="@{viewmodel.startSmokeDay}"
+            android:onClick="@{(view)->viewmodel.startSmokeDialog(view)}"
+            app:layout_constraintBottom_toBottomOf="@+id/startSmokeYearText"
+            app:layout_constraintStart_toEndOf="@+id/startSmokeMonth"
+            app:layout_constraintTop_toTopOf="@+id/startSmokeYearText" />
+
+        <TextView
+            android:id="@+id/startSmokeDay"
+            style="@style/dayStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/startSmokeDayText"
+            app:layout_constraintStart_toEndOf="@+id/startSmokeDayText"
+            app:layout_constraintTop_toTopOf="@+id/startSmokeDayText" />
+
+        <TextView
+            android:id="@+id/startSmokeHourText"
+            style="@style/dialogStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_marginLeft="13dp"
+            android:background="@drawable/input_3"
+            android:text="@{viewmodel.startSmokeHour}"
+            android:onClick="@{(view)->viewmodel.startSmokeTimeDialog(view)}"
+            app:layout_constraintBottom_toBottomOf="@+id/startSmokeDayText"
+            app:layout_constraintStart_toEndOf="@+id/startSmokeDay"
+            app:layout_constraintTop_toTopOf="@+id/startSmokeDayText" />
+
+        <TextView
+            android:id="@+id/startSmokeHour"
+            style="@style/hourStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/startSmokeHourText"
+            app:layout_constraintStart_toEndOf="@+id/startSmokeHourText"
+            app:layout_constraintTop_toTopOf="@+id/startSmokeHourText" />
+
+        <TextView
+            android:id="@+id/questionSmokeCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/noto_sans_kr_medium"
+            android:letterSpacing="-0.06"
+            android:text="평소에 하루 흡연은 얼마나 하셨나요?"
+            android:textColor="#3c3c3c"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="@+id/introText"
+            app:layout_constraintTop_toBottomOf="@+id/startSmokeYearText" />
+
+        <TextView
+            android:id="@+id/smokeCountText"
+            style="@style/dialogStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/input"
+            android:text="@{viewmodel.smokeCount}"
+            app:layout_constraintStart_toStartOf="@+id/introText"
+            app:layout_constraintTop_toBottomOf="@+id/questionSmokeCount" />
+
+        <TextView
+            android:id="@+id/smokeCount"
+            style="@style/countStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/smokeCountText"
+            app:layout_constraintStart_toEndOf="@+id/smokeCountText"
+            app:layout_constraintTop_toTopOf="@+id/smokeCountText" />
+
+        <TextView
+            android:id="@+id/questionSmokeTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/noto_sans_kr_medium"
+            android:letterSpacing="-0.06"
+            android:text="한 번 필 때, 보통 얼마 동안 피시나요?"
+            android:textColor="#3c3c3c"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="@+id/introText"
+            app:layout_constraintTop_toBottomOf="@+id/smokeCountText" />
+
+        <TextView
+            android:id="@+id/smokeTimeText"
+            style="@style/dialogStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/input"
+            android:text="@{viewmodel.smokeTime}"
+            app:layout_constraintStart_toStartOf="@+id/introText"
+            app:layout_constraintTop_toBottomOf="@+id/questionSmokeTime" />
+
+        <TextView
+            android:id="@+id/smokeTime"
+            style="@style/minuteStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/smokeTimeText"
+            app:layout_constraintStart_toEndOf="@+id/smokeTimeText"
+            app:layout_constraintTop_toTopOf="@+id/smokeTimeText" />
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="match_parent"
+            android:layout_height="67dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/btn_next_2"
+            android:onClick="@{(view)-> viewmodel.moveNextActivity(view)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/smokeTimeText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/countFive"
+        android:title="5" />
+
+    <item
+        android:id="@+id/countTen"
+        android:title="10" />
+
+    <item
+        android:id="@+id/countFifteen"
+        android:title="15" />
+
+    <item
+        android:id="@+id/countTwenty"
+        android:title="20" />
+
+    <item
+        android:id="@+id/countTwentyfive"
+        android:title="25" />
+    <item
+        android:id="@+id/countThirty"
+        android:title="30" />
+
+    <item
+        android:id="@+id/countThirtyfive"
+        android:title="35" />
+
+    <item
+        android:id="@+id/countForty"
+        android:title="40" />
+
+</menu>

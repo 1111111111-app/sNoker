@@ -69,6 +69,7 @@
             android:textColor="@drawable/selector_text"
             android:textSize="14sp"
             android:textStyle="bold"
+            android:onClick="@{(view)->viewmodel.femaleButtonCallback(view)}"
             app:layout_constraintBottom_toBottomOf="@+id/maleButton"
             app:layout_constraintStart_toEndOf="@+id/maleButton"
             app:layout_constraintTop_toTopOf="@+id/maleButton" />
@@ -86,6 +87,7 @@
             android:textColor="@drawable/selector_text"
             android:textSize="14sp"
             android:textStyle="bold"
+            android:onClick="@{(view)->viewmodel.maleButtonCallback(view)}"
             app:layout_constraintStart_toStartOf="@+id/introText"
             app:layout_constraintTop_toBottomOf="@+id/questionGender" />
 
@@ -96,9 +98,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginLeft="5dp"
-            app:layout_constraintBottom_toBottomOf="@+id/noSmokeYearText"
-            app:layout_constraintStart_toEndOf="@+id/noSmokeYearText"
-            app:layout_constraintTop_toTopOf="@+id/noSmokeYearText" />
+            app:layout_constraintBottom_toBottomOf="@+id/stopSmokeYearText"
+            app:layout_constraintStart_toEndOf="@+id/stopSmokeYearText"
+            app:layout_constraintTop_toTopOf="@+id/stopSmokeYearText" />
 
         <TextView
             android:id="@+id/noSmokeMonth"
@@ -107,34 +109,34 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginLeft="5dp"
-            app:layout_constraintBottom_toBottomOf="@+id/noSmokeMonthText"
-            app:layout_constraintStart_toEndOf="@+id/noSmokeMonthText"
-            app:layout_constraintTop_toTopOf="@+id/noSmokeMonthText" />
+            app:layout_constraintBottom_toBottomOf="@+id/stopSmokeMonthText"
+            app:layout_constraintStart_toEndOf="@+id/stopSmokeMonthText"
+            app:layout_constraintTop_toTopOf="@+id/stopSmokeMonthText" />
 
         <TextView
-            android:id="@+id/noSmokeDay"
+            android:id="@+id/stopSmokeDay"
             style="@style/dayStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginLeft="5dp"
-            app:layout_constraintBottom_toBottomOf="@+id/noSmokeDayText"
-            app:layout_constraintStart_toEndOf="@+id/noSmokeDayText"
-            app:layout_constraintTop_toTopOf="@+id/noSmokeDayText" />
+            app:layout_constraintBottom_toBottomOf="@+id/stopSmokeDayText"
+            app:layout_constraintStart_toEndOf="@+id/stopSmokeDayText"
+            app:layout_constraintTop_toTopOf="@+id/stopSmokeDayText" />
 
         <TextView
-            android:id="@+id/noSmokeHour"
+            android:id="@+id/stopSmokeHour"
             style="@style/hourStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
             android:layout_marginLeft="5dp"
-            app:layout_constraintBottom_toBottomOf="@+id/noSmokeHourText"
-            app:layout_constraintStart_toEndOf="@+id/noSmokeHourText"
-            app:layout_constraintTop_toTopOf="@+id/noSmokeHourText" />
+            app:layout_constraintBottom_toBottomOf="@+id/stopSmokeHourText"
+            app:layout_constraintStart_toEndOf="@+id/stopSmokeHourText"
+            app:layout_constraintTop_toTopOf="@+id/stopSmokeHourText" />
 
         <TextView
-            android:id="@+id/noSmokeYearText"
+            android:id="@+id/stopSmokeYearText"
             style="@style/dialogStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -142,48 +144,52 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/input"
-            android:onClick="@{(view)->viewmodel.startSmokeDialog(view)}"
+            android:text="@{viewmodel.stopSmokeYear}"
+            android:onClick="@{(view)->viewmodel.stopSmokeDialog(view)}"
             app:layout_constraintStart_toStartOf="@+id/introText"
             app:layout_constraintTop_toBottomOf="@+id/questionSmokeEnd" />
 
         <TextView
-            android:id="@+id/noSmokeMonthText"
+            android:id="@+id/stopSmokeMonthText"
             style="@style/dialogStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
             android:layout_marginLeft="12dp"
             android:background="@drawable/input_2"
-            android:onClick="@{(view)->viewmodel.startSmokeDialog(view)}"
-            app:layout_constraintBottom_toBottomOf="@+id/noSmokeYearText"
+            android:text="@{viewmodel.stopSmokeMonth}"
+            android:onClick="@{(view)->viewmodel.stopSmokeDialog(view)}"
+            app:layout_constraintBottom_toBottomOf="@+id/stopSmokeYearText"
             app:layout_constraintStart_toEndOf="@+id/birthdayYear"
-            app:layout_constraintTop_toTopOf="@+id/noSmokeYearText" />
+            app:layout_constraintTop_toTopOf="@+id/stopSmokeYearText" />
 
         <TextView
-            android:id="@+id/noSmokeDayText"
+            android:id="@+id/stopSmokeDayText"
             style="@style/dialogStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="13dp"
             android:layout_marginLeft="13dp"
             android:background="@drawable/input_3"
-            android:onClick="@{(view)->viewmodel.startSmokeDialog(view)}"
-            app:layout_constraintBottom_toBottomOf="@+id/noSmokeMonthText"
+            android:text="@{viewmodel.stopSmokeDay}"
+            android:onClick="@{(view)->viewmodel.stopSmokeDialog(view)}"
+            app:layout_constraintBottom_toBottomOf="@+id/stopSmokeMonthText"
             app:layout_constraintStart_toEndOf="@+id/birthdayMonth"
-            app:layout_constraintTop_toTopOf="@+id/noSmokeMonthText" />
+            app:layout_constraintTop_toTopOf="@+id/stopSmokeMonthText" />
 
         <TextView
-            android:id="@+id/noSmokeHourText"
+            android:id="@+id/stopSmokeHourText"
             style="@style/dialogStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="13dp"
             android:layout_marginLeft="13dp"
             android:background="@drawable/input_3"
-            android:onClick="@{(view)->viewmodel.startSmokeDialog(view)}"
-            app:layout_constraintBottom_toBottomOf="@+id/noSmokeDayText"
-            app:layout_constraintStart_toEndOf="@+id/noSmokeDay"
-            app:layout_constraintTop_toTopOf="@+id/noSmokeDayText" />
+            android:text="@{viewmodel.stopSmokeHour}"
+            android:onClick="@{(view)->viewmodel.stopSmokeTimeDialog(view)}"
+            app:layout_constraintBottom_toBottomOf="@+id/stopSmokeDayText"
+            app:layout_constraintStart_toEndOf="@+id/stopSmokeDay"
+            app:layout_constraintTop_toTopOf="@+id/stopSmokeDayText" />
 
         <TextView
             android:id="@+id/birthdayYear"
@@ -227,6 +233,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/input"
+            android:text="@{viewmodel.birthdayYear}"
             android:onClick="@{(view)->viewmodel.birthDayDialog(view)}"
             app:layout_constraintStart_toStartOf="@+id/introText"
             app:layout_constraintTop_toBottomOf="@+id/questionBirthDay" />
@@ -239,6 +246,7 @@
             android:layout_marginStart="13dp"
             android:layout_marginLeft="13dp"
             android:background="@drawable/input_2"
+            android:text="@{viewmodel.birthdayMonth}"
             android:onClick="@{(view)->viewmodel.birthDayDialog(view)}"
             app:layout_constraintBottom_toBottomOf="@+id/birthdayYearText"
             app:layout_constraintStart_toEndOf="@+id/birthdayYear"
@@ -252,6 +260,7 @@
             android:layout_marginStart="13dp"
             android:layout_marginLeft="13dp"
             android:background="@drawable/input_3"
+            android:text="@{viewmodel.birthdayDay}"
             android:onClick="@{(view)->viewmodel.birthDayDialog(view)}"
             app:layout_constraintBottom_toBottomOf="@+id/birthdayYearText"
             app:layout_constraintStart_toEndOf="@+id/birthdayMonth"
@@ -287,7 +296,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/noSmokeDayText" />
+            app:layout_constraintTop_toBottomOf="@+id/stopSmokeDayText" />
 
         <TextView
             android:id="@+id/questionBirthDay"
