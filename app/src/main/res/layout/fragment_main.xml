@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.snoker.view.fragment.MainFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f4f4f4"
+        tools:context=".MainFragment">
+
+
+        <ImageView
+            android:id="@+id/backGroundImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/sectionImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="126dp"
+            android:background="@drawable/section_1_bg"
+            app:layout_constraintTop_toTopOf="@+id/backGroundImage"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <ImageView
+            android:id="@+id/characterImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="135dp"
+            android:background="@drawable/character"
+            app:layout_constraintBottom_toBottomOf="@+id/sectionImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/backGroundImage" />
+
+        <ImageView
+            android:id="@+id/settingImage"
+            android:layout_width="11dp"
+            android:layout_height="11dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            app:layout_constraintBottom_toTopOf="@+id/introText"
+            app:layout_constraintEnd_toStartOf="@+id/idText"
+            app:layout_constraintTop_toTopOf="@+id/idText"
+            app:srcCompat="@drawable/icon_setting" />
+
+        <ImageView
+            android:id="@+id/dayImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/characterImage"
+            app:srcCompat="@drawable/day" />
+
+        <ImageView
+            android:id="@+id/minImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            app:layout_constraintBottom_toBottomOf="@+id/hourImage"
+            app:layout_constraintEnd_toStartOf="@+id/secImage"
+            app:layout_constraintStart_toEndOf="@+id/hourImage"
+            app:layout_constraintTop_toTopOf="@+id/hourImage"
+            app:srcCompat="@drawable/min" />
+
+        <ImageView
+            android:id="@+id/hourImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            app:layout_constraintBottom_toBottomOf="@+id/dayImage"
+            app:layout_constraintStart_toEndOf="@+id/dayImage"
+            app:layout_constraintTop_toTopOf="@+id/dayImage"
+            app:srcCompat="@drawable/hour" />
+
+        <ImageView
+            android:id="@+id/secImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            app:layout_constraintBottom_toBottomOf="@+id/minImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/minImage"
+            app:srcCompat="@drawable/sec" />
+
+        <TextView
+            android:id="@+id/idText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="분당요정"
+            android:textSize="17sp"
+            android:textColor="#ffffff"
+            android:letterSpacing="-0.06"
+            android:gravity="center_horizontal"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0dp"
+            android:fontFamily="@font/noto_sans_kr_bold"
+            app:layout_constraintEnd_toStartOf="@+id/characterImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/introText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:gravity="center_horizontal"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.06"
+            android:lineSpacingExtra="0dp"
+            android:text="어서오세요!"
+            android:textColor="#ffffff"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="@+id/settingImage"
+            app:layout_constraintTop_toBottomOf="@+id/idText" />
+
+        <TextView
+            android:id="@+id/dateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:gravity="center_horizontal"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.06"
+            android:lineSpacingExtra="0dp"
+            android:text="6월 6일 토요일"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/settingImage"
+            app:layout_constraintTop_toBottomOf="@+id/introText" />
+
+        <TextView
+            android:id="@+id/dayText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/noto_sans_kr_bold"
+            android:gravity="center_horizontal"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.06"
+            android:lineSpacingExtra="0dp"
+            android:text="16"
+            android:textColor="#3c3c3c"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/dayImage"
+            app:layout_constraintStart_toStartOf="@+id/dayImage"
+            app:layout_constraintTop_toBottomOf="@+id/dayImage" />
+
+        <TextView
+            android:id="@+id/hourText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/noto_sans_kr_bold"
+            android:gravity="center_horizontal"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.06"
+            android:lineSpacingExtra="0dp"
+            android:text="05"
+            android:textColor="#3c3c3c"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/hourImage"
+            app:layout_constraintStart_toStartOf="@+id/hourImage"
+            app:layout_constraintTop_toBottomOf="@+id/hourImage" />
+
+        <TextView
+            android:id="@+id/minText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/noto_sans_kr_bold"
+            android:gravity="center_horizontal"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.06"
+            android:lineSpacingExtra="0dp"
+            android:text="20"
+            android:textColor="#3c3c3c"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/minImage"
+            app:layout_constraintStart_toStartOf="@+id/minImage"
+            app:layout_constraintTop_toBottomOf="@+id/minImage" />
+
+        <TextView
+            android:id="@+id/secText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/noto_sans_kr_bold"
+            android:gravity="center_horizontal"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.06"
+            android:lineSpacingExtra="0dp"
+            android:text="21"
+            android:textColor="#3c3c3c"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/secImage"
+            app:layout_constraintStart_toStartOf="@+id/secImage"
+            app:layout_constraintTop_toBottomOf="@+id/secImage" />
+
+        <TextView
+            android:id="@+id/dayToHourText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/noto_sans_kr_bold"
+            android:gravity="center_horizontal"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.06"
+            android:lineSpacingExtra="0dp"
+            android:text=":"
+            android:textColor="#3c3c3c"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/hourImage"
+            app:layout_constraintStart_toStartOf="@+id/dayImage"
+            app:layout_constraintTop_toBottomOf="@+id/dayImage" />
+
+        <TextView
+            android:id="@+id/hourToMinText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/noto_sans_kr_bold"
+            android:gravity="center_horizontal"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.06"
+            android:lineSpacingExtra="0dp"
+            android:text=":"
+            android:textColor="#3c3c3c"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/minImage"
+            app:layout_constraintStart_toStartOf="@+id/hourImage"
+            app:layout_constraintTop_toBottomOf="@+id/hourImage" />
+
+        <TextView
+            android:id="@+id/minToSecText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/noto_sans_kr_bold"
+            android:gravity="center_horizontal"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.06"
+            android:lineSpacingExtra="0dp"
+            android:text=":"
+            android:textColor="#3c3c3c"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/secImage"
+            app:layout_constraintStart_toStartOf="@+id/minImage"
+            app:layout_constraintTop_toBottomOf="@+id/minImage" />
+
+        <TextView
+            android:id="@+id/levelText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/noto_sans_kr_bold"
+            android:gravity="center_horizontal"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.06"
+            android:lineSpacingExtra="0dp"
+            android:text="나의 레벨"
+            android:textColor="#3c3c3c"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sectionImage" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -85,39 +85,98 @@ class SmokeInfoViewModel : BaseViewModel() {
 
     fun startSmokeTimeDialog(view: View) {
         val context: Context = view.context
-        var timePickerDialog = TimePickerDialog(context, startSmokeTimeDialogListener, startSmokeCalendar.get(Calendar.HOUR), startSmokeCalendar.get(Calendar.MINUTE), true)
+        var timePickerDialog = TimePickerDialog(context, startSmokeTimeDialogListener,
+                                                        startSmokeCalendar.get(Calendar.HOUR),
+                                                        startSmokeCalendar.get(Calendar.MINUTE),
+                                            true)
 
         timePickerDialog!!.show()
     }
 
     fun contextMenuCheck(item: MenuItem) {
         when(item?.itemId) {
+            R.id.countOne -> {
+                smokeCount.set("1")
+                isSmokeCountCheck = true
+            }
+            R.id.countTwo -> {
+                smokeCount.set("2")
+                isSmokeCountCheck = true
+            }
+            R.id.countThree -> {
+                smokeCount.set("3")
+                isSmokeCountCheck = true
+            }
+            R.id.countFour -> {
+                smokeCount.set("4")
+                isSmokeCountCheck = true
+            }
             R.id.countFive -> {
                 smokeCount.set("5")
+                isSmokeCountCheck = true
+            }
+            R.id.countSix -> {
+                smokeCount.set("6")
+                isSmokeCountCheck = true
+            }
+            R.id.countSeven -> {
+                smokeCount.set("7")
+                isSmokeCountCheck = true
+            }
+            R.id.countEight -> {
+                smokeCount.set("8")
+                isSmokeCountCheck = true
+            }
+            R.id.countNine -> {
+                smokeCount.set("9")
                 isSmokeCountCheck = true
             }
             R.id.countTen -> {
                 smokeCount.set("10")
                 isSmokeCountCheck = true
             }
+            R.id.countEleven -> {
+                smokeCount.set("11")
+                isSmokeCountCheck = true
+            }
+            R.id.countTwelve -> {
+                smokeCount.set("12")
+                isSmokeCountCheck = true
+            }
+            R.id.countThirteen -> {
+                smokeCount.set("13")
+                isSmokeCountCheck = true
+            }
+            R.id.countFourteen -> {
+                smokeCount.set("14")
+                isSmokeCountCheck = true
+            }
             R.id.countFifteen -> {
                 smokeCount.set("15")
+                isSmokeCountCheck = true
+            }
+            R.id.countSixteen -> {
+                smokeCount.set("16")
+                isSmokeCountCheck = true
+            }
+            R.id.countSeventeen -> {
+                smokeCount.set("17")
+                isSmokeCountCheck = true
+            }
+            R.id.countEighteen -> {
+                smokeCount.set("18")
+                isSmokeCountCheck = true
+            }
+            R.id.countNineteen -> {
+                smokeCount.set("19")
                 isSmokeCountCheck = true
             }
             R.id.countTwenty -> {
                 smokeCount.set("20")
                 isSmokeCountCheck = true
             }
-            R.id.countTwentyfive -> {
-                smokeCount.set("25")
-                isSmokeCountCheck = true
-            }
             R.id.countThirty -> {
                 smokeCount.set("30")
-                isSmokeCountCheck = true
-            }
-            R.id.countThirtyfive -> {
-                smokeCount.set("35")
                 isSmokeCountCheck = true
             }
             R.id.countForty -> {
@@ -142,7 +201,7 @@ class SmokeInfoViewModel : BaseViewModel() {
             }
 
         }
-
+        isActiveButton.value = checkAllUserInfo()
     }
 
     fun moveNextActivity(view: View) {
