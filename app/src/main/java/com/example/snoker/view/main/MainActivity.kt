@@ -1,51 +1,35 @@
 package com.example.snoker.view.main
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
-import androidx.databinding.DataBindingUtil
+import androidx.appcompat.app.AppCompatActivity
 import com.example.snoker.R
-import com.example.snoker.base.BaseActivity
-import com.example.snoker.databinding.ActivityMainBinding
-import com.example.snoker.view.fragment.MainFragment
-import com.example.snoker.view.fragment.MyPageFragment
-import com.example.snoker.view.fragment.ProgressFragment
+import com.example.snoker.view.main.fragment.BoardFragment
+import com.example.snoker.view.main.fragment.MainFragment
+import com.example.snoker.view.main.fragment.MyPageFragment
+import com.example.snoker.view.main.fragment.ProgressFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(),
-    BottomNavigationView.OnNavigationItemSelectedListener {
+class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var mainFragment: MainFragment
     private lateinit var progressFragment: ProgressFragment
     private lateinit var myPageFragment: MyPageFragment
+    private lateinit var boardFragment: BoardFragment
 
     companion object {
         const val TAG: String = "MainActivity"
     }
 
-    override val layoutResourceId: Int
-        get() = R.layout.activity_main
-
-    override val viewModel: MainViewModel = MainViewModel()
-
-    override fun initStartView() {
-    }
-
-    override fun initDataBinding() {
-        val binding: ActivityMainBinding = DataBindingUtil.setContentView(this, layoutResourceId)
-        binding.viewmodel = viewModel
-
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         navigation.setOnNavigationItemSelectedListener(this)
         mainFragment = MainFragment.newInstance()
         supportFragmentManager.beginTransaction()
             .add(R.id.frame, mainFragment)
             .commit()
-    }
-
-    override fun initAfterBinding() {
-
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -71,6 +55,13 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(),
                 myPageFragment = MyPageFragment.newInstance()
                 supportFragmentManager.beginTransaction()
                     .replace(R.id.frame, myPageFragment)
+                    .commit()
+            }
+            R.id.board -> {
+                Log.d(TAG, "MainAcitivity 게시판버튼 클릭")
+                boardFragment = BoardFragment.newInstance()
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.frame, boardFragment)
                     .commit()
             }
         }

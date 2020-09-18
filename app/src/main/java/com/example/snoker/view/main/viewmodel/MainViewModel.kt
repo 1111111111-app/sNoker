@@ -1,4 +1,4 @@
-package com.example.snoker.view.main
+package com.example.snoker.view.main.viewmodel
 
 import com.example.snoker.base.BaseViewModel
 
