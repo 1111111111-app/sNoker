@@ -21,16 +21,15 @@ import java.util.*
 
 class SmokeInfoViewModel : BaseViewModel() {
     private val TAG = "SmokeInfoActivity"
-    private val INIT_STRING = "선택"
     private var startSmokeCalendar = Calendar.getInstance()
 
-    val startSmokeYear = ObservableField<String>(INIT_STRING)
-    val startSmokeMonth = ObservableField<String>(INIT_STRING)
-    val startSmokeDay = ObservableField<String>(INIT_STRING)
-    val startSmokeHour = ObservableField<String>(INIT_STRING)
+    val startSmokeYear = ObservableField<String>("선택")
+    val startSmokeMonth = ObservableField<String>("선택")
+    val startSmokeDay = ObservableField<String>("선택")
+    val startSmokeHour = ObservableField<String>("선택")
 
-    val smokeCount = ObservableField<String>(INIT_STRING)
-    val smokeTime = ObservableField<String>(INIT_STRING)
+    val smokeCount = ObservableField<String>("선택")
+    val smokeTime = ObservableField<String>("선택")
 
     var isStartSMokeDayCheck: Boolean = false
     var isStartSmokeHourCheck: Boolean = false
