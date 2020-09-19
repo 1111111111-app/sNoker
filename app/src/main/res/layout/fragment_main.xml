@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewmodel"
-            type="com.example.snoker.view.fragment.MainFragment" />
+            type="com.example.snoker.view.main.fragment.MainFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

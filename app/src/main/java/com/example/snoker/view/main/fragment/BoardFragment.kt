@@ -1,4 +1,4 @@
-package com.example.snoker.view.fragment
+package com.example.snoker.view.main.fragment
 
 import android.content.Context
 import android.os.Bundle
@@ -7,14 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.snoker.R
-//import com.example.snoker.data.PostListAdapter
-import kotlinx.android.synthetic.main.fragment_board.*
 
 class BoardFragment : Fragment() {
-
-    //private var postListAdapter = PostListAdapter()
     companion object {
         const val TAG: String = "BoardFragment"
 
@@ -32,8 +27,6 @@ class BoardFragment : Fragment() {
     override fun onAttach(context: Context) {
         super.onAttach(context)
         Log.d(TAG, "BoardFragment on Attach Called")
-//        postList.adapter = postListAdapter
-//        postList.layoutManager = LinearLayoutManager(context)
     }
 
     override fun onCreateView(

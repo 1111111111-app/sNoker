@@ -5,10 +5,10 @@ import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.example.snoker.R
-import com.example.snoker.view.fragment.BoardFragment
-import com.example.snoker.view.fragment.MainFragment
-import com.example.snoker.view.fragment.MyPageFragment
-import com.example.snoker.view.fragment.ProgressFragment
+import com.example.snoker.view.main.fragment.BoardFragment
+import com.example.snoker.view.main.fragment.MainFragment
+import com.example.snoker.view.main.fragment.MyPageFragment
+import com.example.snoker.view.main.fragment.ProgressFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -25,8 +25,6 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.d(TAG, "Main Activity Created")
-
         navigation.setOnNavigationItemSelectedListener(this)
         mainFragment = MainFragment.newInstance()
         supportFragmentManager.beginTransaction()
