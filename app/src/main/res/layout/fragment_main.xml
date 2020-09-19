@@ -286,5 +286,79 @@
             android:textSize="17sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/sectionImage" />
+
+        <ImageView
+            android:id="@+id/levelmage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/section_2_bg"
+            app:layout_constraintStart_toStartOf="@+id/levelText"
+            app:layout_constraintTop_toBottomOf="@+id/levelText" />
+
+        <ImageView
+            android:id="@+id/progressBelowImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/below"
+            app:layout_constraintBottom_toBottomOf="@+id/levelmage"
+            app:layout_constraintEnd_toEndOf="@+id/levelmage"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="@+id/levelmage" />
+
+        <ImageView
+            android:id="@+id/progressAboveImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="52dp"
+            android:background="@drawable/above"
+            app:layout_constraintBottom_toBottomOf="@+id/levelmage"
+            app:layout_constraintEnd_toEndOf="@+id/levelmage"
+            app:layout_constraintStart_toStartOf="@+id/levelmage" />
+
+        <ImageView
+            android:id="@+id/levelSeeDetailImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/see_detail"
+            app:layout_constraintBottom_toTopOf="@+id/levelmage"
+            app:layout_constraintEnd_toEndOf="@+id/levelmage" />
+
+        <TextView
+            android:id="@+id/cheerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/noto_sans_kr_bold"
+            android:gravity="center_horizontal"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.06"
+            android:lineSpacingExtra="0dp"
+            android:text="실시간 랜덤 응원 한마디"
+            android:textColor="#3c3c3c"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="@+id/levelText"
+            app:layout_constraintTop_toBottomOf="@+id/levelmage" />
+
+        <TextView
+            android:id="@+id/cheerTextBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/section_3_bg"
+            app:layout_constraintStart_toStartOf="@+id/cheerText"
+            app:layout_constraintTop_toBottomOf="@+id/cheerText" />
+
+        <ImageView
+            android:id="@+id/cheerSeeDetailImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/see_detail"
+            app:layout_constraintBottom_toTopOf="@+id/cheerTextBox"
+            app:layout_constraintEnd_toEndOf="@+id/cheerTextBox" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
