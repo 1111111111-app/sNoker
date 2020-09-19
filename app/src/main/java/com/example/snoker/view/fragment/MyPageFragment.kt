@@ -1,4 +1,4 @@
-package com.example.snoker.view.main.fragment
+package com.example.snoker.view.fragment
 
 import android.content.Context
 import android.os.Bundle
