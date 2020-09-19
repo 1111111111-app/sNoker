@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import com.example.snoker.R
 import com.example.snoker.base.BaseActivity
 import com.example.snoker.databinding.ActivityMainBinding
+import com.example.snoker.view.fragment.BoardFragment
 import com.example.snoker.view.fragment.MainFragment
 import com.example.snoker.view.fragment.MyPageFragment
 import com.example.snoker.view.fragment.ProgressFragment
@@ -20,6 +21,7 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(),
     private lateinit var mainFragment: MainFragment
     private lateinit var progressFragment: ProgressFragment
     private lateinit var myPageFragment: MyPageFragment
+    private lateinit var boardFragment: BoardFragment
 
     companion object {
         const val TAG: String = "MainActivity"
@@ -52,6 +54,7 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(),
         Log.d(TAG, "MainActivity on Navigation Item Selected Call")
 
         when(item.itemId) {
+
             R.id.main -> {
                 Log.d(TAG, "MainAcitivity 메인버튼 클릭")
                 mainFragment = MainFragment.newInstance()
@@ -59,6 +62,7 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(),
                                         .replace(R.id.frame, mainFragment)
                                         .commit()
             }
+
             R.id.progress -> {
                 Log.d(TAG, "MainAcitivity 프로그래스버튼 클릭")
                 progressFragment = ProgressFragment.newInstance()
@@ -66,11 +70,20 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(),
                     .replace(R.id.frame, progressFragment)
                     .commit()
             }
+
             R.id.mypage -> {
                 Log.d(TAG, "MainAcitivity 마이페이지버튼 클릭")
                 myPageFragment = MyPageFragment.newInstance()
                 supportFragmentManager.beginTransaction()
                     .replace(R.id.frame, myPageFragment)
+                    .commit()
+            }
+
+            R.id.board -> {
+                Log.d(TAG, "MainAcitivity 게시판버튼 클릭")
+                boardFragment = BoardFragment.newInstance()
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.frame, boardFragment)
                     .commit()
             }
         }
