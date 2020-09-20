@@ -63,6 +63,14 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(),
                                         .commit()
             }
 
+            R.id.board -> {
+                Log.d(TAG, "MainAcitivity 게시판버튼 클릭")
+                boardFragment = BoardFragment.newInstance()
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.frame, boardFragment)
+                    .commit()
+            }
+
             R.id.progress -> {
                 Log.d(TAG, "MainAcitivity 프로그래스버튼 클릭")
                 progressFragment = ProgressFragment.newInstance()
@@ -79,13 +87,6 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(),
                     .commit()
             }
 
-            R.id.board -> {
-                Log.d(TAG, "MainAcitivity 게시판버튼 클릭")
-                boardFragment = BoardFragment.newInstance()
-                supportFragmentManager.beginTransaction()
-                    .replace(R.id.frame, boardFragment)
-                    .commit()
-            }
         }
         return true
     }

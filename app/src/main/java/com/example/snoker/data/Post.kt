@@ -5,4 +5,5 @@ data class Post(
     var postText: String,
     var createdAt: String,
     var smokingBan: Int
+//    val fullname:String, val quiz:String
 )
