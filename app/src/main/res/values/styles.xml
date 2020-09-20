@@ -23,7 +23,6 @@
     </style>
 
     <style name="dialogStyle">
-        <item name="android:text">선택</item>
         <item name="android:textSize">14sp</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="android:textColor">#a1a1a1</item>
@@ -64,4 +63,12 @@
         <item name="android:gravity">center_horizontal</item>
         <item name="android:textColor">#3c3c3c</item>
     </style>
+
+    <style name="countStyle">
+        <item name="android:text">개비</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">#3c3c3c</item>
+    </style>
+
 </resources>

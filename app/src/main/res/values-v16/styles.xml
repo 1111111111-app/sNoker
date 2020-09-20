@@ -2,7 +2,6 @@
 <resources>
 
     <style name="dialogStyle">
-        <item name="android:text">선택</item>
         <item name="android:textSize">14sp</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="android:textColor">#a1a1a1</item>
@@ -47,6 +46,15 @@
 
     <style name="minuteStyle">
         <item name="android:text">분</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">#3c3c3c</item>
+        <item name="android:fontFamily">@font/noto_sans_kr_medium</item>
+
+    </style>
+
+    <style name="countStyle">
+        <item name="android:text">개비</item>
         <item name="android:textSize">14sp</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="android:textColor">#3c3c3c</item>
