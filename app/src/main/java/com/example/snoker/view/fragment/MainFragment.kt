@@ -6,10 +6,15 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import androidx.databinding.DataBindingUtil
+import androidx.recyclerview.widget.RecyclerView
 import com.example.snoker.R
+import com.example.snoker.base.BaseFragment
+import com.example.snoker.databinding.FragmentMainBinding
+import com.example.snoker.view.fragment.MainViewModel
 
-class MainFragment : Fragment() {
+class MainFragment : BaseFragment<FragmentMainBinding, MainViewModel>(R.layout.fragment_main){
+
     companion object {
         const val TAG: String = "MainFragment"
 
@@ -18,24 +23,29 @@ class MainFragment : Fragment() {
         }
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        Log.d(TAG, "MainFragment On create Called")
+    override val viewModel: MainViewModel = MainViewModel()
+
+    override fun initStartView(container: ViewGroup?) {
+        var binding: FragmentMainBinding = DataBindingUtil.inflate(this.layoutInflater, layoutResourceId, container, false)
+        binding.viewmodel = viewModel
     }
 
-    // 프레그먼트를 안고 있는 액티비티에 붙었을때
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        Log.d(TAG, "MainFragment on Attach Called")
+    override fun initDataBinding() {
+
+
     }
+
+    override fun initAfterBinding() {
+    }
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        Log.d(TAG, "MainFragment on Create View Called")
+        var rootView = super.onCreateView(inflater, container, savedInstanceState)
 
-        return inflater.inflate(R.layout.fragment_main, container, false)
+        return rootView
     }
 }

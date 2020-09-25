@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewmodel"
-            type="com.example.snoker.view.fragment.MainFragment" />
+            type="com.example.snoker.view.fragment.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,7 +14,6 @@
         android:layout_height="match_parent"
         android:background="#f4f4f4"
         tools:context=".MainFragment">
-
 
         <ImageView
             android:id="@+id/backGroundImage"

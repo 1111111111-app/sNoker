@@ -6,10 +6,13 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.snoker.R
+import com.example.snoker.base.BaseFragment
+import com.example.snoker.databinding.FragmentProgressBinding
 
-class ProgressFragment : Fragment() {
+class ProgressFragment : BaseFragment<FragmentProgressBinding, ProgressViewModel>(R.layout.fragment_progress) {
     companion object {
         const val TAG: String = "ProgressFragment"
 
@@ -18,24 +21,29 @@ class ProgressFragment : Fragment() {
         }
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        Log.d(TAG, "ProgressFragment On create Called")
+    override val viewModel: ProgressViewModel = ProgressViewModel()
+
+    override fun initStartView(container: ViewGroup?) {
+        var binding: FragmentProgressBinding = DataBindingUtil.inflate(this.layoutInflater, layoutResourceId, container, false)
+        binding.viewmodel = viewModel
     }
 
-    // 프레그먼트를 안고 있는 액티비티에 붙었을때
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        Log.d(TAG, "ProgressFragment on Attach Called")
+    override fun initDataBinding() {
+
+
     }
+
+    override fun initAfterBinding() {
+    }
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        Log.d(TAG, "ProgressFragment on Create View Called")
+        var rootView = super.onCreateView(inflater, container, savedInstanceState)
 
-        return inflater.inflate(R.layout.fragment_progress, container, false)
+        return rootView
     }
 }

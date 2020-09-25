@@ -11,14 +11,14 @@ class PostListAdapter : RecyclerView.Adapter<PostListAdapter.PostViewHolder>() {
     //items MutableList, MutableList는 item을 추가할 수 있다.
     var items: MutableList<Post> = mutableListOf(
         Post("Tom", "금연하는중입니다", "오늘", 1),
-        Post("Leo", "금연하기싫다", "어제", 2),
-        Post("Jamey", "금연 왜함?", "오늘", 3),
-        Post("Jamey", "금연 왜함?", "오늘", 3),
-        Post("Jamey", "금연 왜함?", "오늘", 3),
-        Post("Jamey", "금연 왜함?", "오늘", 3),
-        Post("Jamey", "금연 왜함?", "오늘", 3),
-        Post("Jamey", "금연 왜함?", "오늘", 3),
-        Post("Jamey", "금연 왜함?", "오늘", 3)
+        Post("Leo", "금연하기싫다", "어제", 2)
+//        Post("Jamey", "금연 왜함?", "오늘", 3),
+//        Post("Jamey", "금연 왜함?", "오늘", 3),
+//        Post("Jamey", "금연 왜함?", "오늘", 3),
+//        Post("Jamey", "금연 왜함?", "오늘", 3),
+//        Post("Jamey", "금연 왜함?", "오늘", 3),
+//        Post("Jamey", "금연 왜함?", "오늘", 3),
+//        Post("Jamey", "금연 왜함?", "오늘", 3)
 
 //        Post("제목1", "퀴즈1"),
 //        Post("제목2", "퀴즈2"),
