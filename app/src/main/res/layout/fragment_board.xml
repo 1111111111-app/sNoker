@@ -1,168 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ImageView
-        android:id="@+id/topImage"
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.snoker.view.fragment.BoardViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/top"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/nickNameText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginLeft="45dp"
-        android:layout_marginTop="32dp"
-        android:fontFamily="@font/noto_sans_kr_bold"
-        android:gravity="center_horizontal"
-        android:includeFontPadding="false"
-        android:lineSpacingExtra="0dp"
-        android:letterSpacing="-0.06"
-        android:text="분당요정"
-        android:textColor="#ffffff"
-        android:textSize="17sp"
-        app:layout_constraintStart_toStartOf="@+id/topImage"
-        app:layout_constraintTop_toTopOf="@+id/topImage" />
+        <ImageView
+            android:id="@+id/topImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/settingImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
-        android:background="@drawable/icon_setting"
-        app:layout_constraintBottom_toBottomOf="@+id/nickNameText"
-        app:layout_constraintEnd_toStartOf="@+id/nickNameText"
-        app:layout_constraintTop_toTopOf="@+id/nickNameText" />
+        <TextView
+            android:id="@+id/nickNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/noto_sans_kr_bold"
+            android:gravity="center_horizontal"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0dp"
+            android:letterSpacing="-0.06"
+            android:text="분당요정"
+            android:textColor="#ffffff"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="@+id/topImage"
+            app:layout_constraintTop_toTopOf="@+id/topImage" />
 
-    <TextView
-        android:id="@+id/boardText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/noto_sans_kr_regular"
-        android:includeFontPadding="false"
-        android:letterSpacing="-0.06"
-        android:lineSpacingExtra="0dp"
-        android:text="무슨 생각을 하고 계시나요?"
-        android:textColor="#ffffff"
-        android:textSize="17sp"
-        app:layout_constraintStart_toStartOf="@+id/settingImage"
-        app:layout_constraintTop_toBottomOf="@+id/nickNameText" />
+        <ImageView
+            android:id="@+id/settingImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:background="@drawable/icon_setting"
+            app:layout_constraintBottom_toBottomOf="@+id/nickNameText"
+            app:layout_constraintEnd_toStartOf="@+id/nickNameText"
+            app:layout_constraintTop_toTopOf="@+id/nickNameText" />
 
-    <ImageView
-        android:id="@+id/logoImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:background="@drawable/logo_10"
-        app:layout_constraintBottom_toBottomOf="@+id/nickNameText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/nickNameText" />
+        <TextView
+            android:id="@+id/boardText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.06"
+            android:lineSpacingExtra="0dp"
+            android:text="무슨 생각을 하고 계시나요?"
+            android:textColor="#ffffff"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="@+id/settingImage"
+            app:layout_constraintTop_toBottomOf="@+id/nickNameText" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/postList"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/userTalkBoxText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topImage"
-        app:layout_constraintVertical_bias="1.0" />
+        <ImageView
+            android:id="@+id/logoImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/logo_10"
+            app:layout_constraintBottom_toBottomOf="@+id/nickNameText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/nickNameText" />
 
-    <TextView
-        android:id="@+id/userTalkBoxText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/talk_bg_color"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/postList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/userTalkBoxText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topImage"
+            app:layout_constraintVertical_bias="1.0" />
 
-    <TextView
-        android:id="@+id/userSmokingBanText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/noto_sans_kr_regular"
-        android:includeFontPadding="false"
-        android:letterSpacing="-0.06"
-        android:lineSpacingExtra="0dp"
-        android:text="금연 16일째"
-        android:textColor="#ffffff"
-        android:textSize="13sp"
-        app:layout_constraintStart_toStartOf="@+id/userTalkBoxText"
-        app:layout_constraintTop_toBottomOf="@+id/postList" />
+        <TextView
+            android:id="@+id/userTalkBoxText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/talk_bg_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/userNickNameText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:includeFontPadding="false"
-        android:letterSpacing="-0.06"
-        android:lineSpacingExtra="0dp"
-        android:text="분당요정"
-        android:textColor="#ffffff"
-        android:textSize="13sp"
-        app:layout_constraintBottom_toBottomOf="@+id/userSmokingBanText"
-        app:layout_constraintStart_toEndOf="@+id/userSmokingBanText"
-        app:layout_constraintTop_toTopOf="@+id/userSmokingBanText" />
+        <TextView
+            android:id="@+id/userSmokingBanText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.06"
+            android:lineSpacingExtra="0dp"
+            android:text="금연 16일째"
+            android:textColor="#ffffff"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@+id/userTalkBoxText"
+            app:layout_constraintTop_toBottomOf="@+id/postList" />
 
-    <ImageView
-        android:id="@+id/lineColorImage"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginRight="36dp"
-        android:background="@drawable/line_color"
-        app:layout_constraintEnd_toEndOf="@+id/userTalkBoxText"
-        app:layout_constraintStart_toStartOf="@+id/userSmokingBanText"
-        app:layout_constraintTop_toBottomOf="@+id/userNickNameText" />
+        <TextView
+            android:id="@+id/userNickNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.06"
+            android:lineSpacingExtra="0dp"
+            android:text="분당요정"
+            android:textColor="#ffffff"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/userSmokingBanText"
+            app:layout_constraintStart_toEndOf="@+id/userSmokingBanText"
+            app:layout_constraintTop_toTopOf="@+id/userSmokingBanText" />
 
-    <EditText
-        android:id="@+id/userTypeText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="7dp"
-        android:background="#9100f9"
-        android:ems="10"
-        android:fontFamily="@font/noto_sans_kr_medium"
-        android:gravity="center_horizontal"
-        android:includeFontPadding="false"
-        android:inputType="textPersonName"
-        android:letterSpacing="-0.06"
-        android:lineSpacingExtra="0dp"
-        android:text="당신의 각오, 혹은 응원 한마디를 적어주세요."
-        android:textColor="#ffffff"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/lineColorImage"
-        app:layout_constraintStart_toStartOf="@+id/lineColorImage"
-        app:layout_constraintTop_toBottomOf="@+id/lineColorImage" />
+        <ImageView
+            android:id="@+id/lineColorImage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="36dp"
+            android:layout_marginRight="36dp"
+            android:background="@drawable/line_color"
+            app:layout_constraintEnd_toEndOf="@+id/userTalkBoxText"
+            app:layout_constraintStart_toStartOf="@+id/userSmokingBanText"
+            app:layout_constraintTop_toBottomOf="@+id/userNickNameText" />
+
+        <EditText
+            android:id="@+id/userTypeText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:background="#9100f9"
+            android:ems="10"
+            android:fontFamily="@font/noto_sans_kr_medium"
+            android:gravity="center_horizontal"
+            android:includeFontPadding="false"
+            android:inputType="textPersonName"
+            android:letterSpacing="-0.06"
+            android:lineSpacingExtra="0dp"
+            android:text="당신의 각오, 혹은 응원 한마디를 적어주세요."
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/lineColorImage"
+            app:layout_constraintStart_toStartOf="@+id/lineColorImage"
+            app:layout_constraintTop_toBottomOf="@+id/lineColorImage" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
