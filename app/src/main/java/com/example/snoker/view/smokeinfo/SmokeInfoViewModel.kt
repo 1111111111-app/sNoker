@@ -11,34 +11,48 @@ import android.view.View
 import android.widget.DatePicker
 import android.widget.TimePicker
 import androidx.databinding.ObservableField
-import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.*
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelStores.of
 import com.example.snoker.R
 import com.example.snoker.base.BaseViewModel
 import com.example.snoker.view.main.MainActivity
+import com.example.snoker.view.register.UserRegisterViewModel
 import com.example.snoker.view.smokeinfo.SmokeInfoActivity
 import kotlinx.android.synthetic.main.activity_smoke_info.*
+import kotlinx.android.synthetic.main.activity_user_register.*
 import java.util.*
 
 class SmokeInfoViewModel : BaseViewModel() {
+
+    companion object {
+        private var instance: SmokeInfoViewModel? = null
+        fun getInstance() = instance ?: synchronized(SmokeInfoViewModel::class.java) {
+            instance ?: SmokeInfoViewModel().also { instance = it }
+        }
+    }
+
     private val TAG = "SmokeInfoActivity"
+    private val INIT_TEXT = "선택"
     private var startSmokeCalendar = Calendar.getInstance()
 
-    val startSmokeYear = ObservableField<String>("선택")
-    val startSmokeMonth = ObservableField<String>("선택")
-    val startSmokeDay = ObservableField<String>("선택")
-    val startSmokeHour = ObservableField<String>("선택")
+    val startSmokeYear = ObservableField<String>(INIT_TEXT)
+    val startSmokeMonth = ObservableField<String>(INIT_TEXT)
+    val startSmokeDay = ObservableField<String>(INIT_TEXT)
+    val startSmokeHour = ObservableField<String>(INIT_TEXT)
 
-    val smokeCount = ObservableField<String>("선택")
-    val smokeTime = ObservableField<String>("선택")
+    val smokeCount = ObservableField<String>(INIT_TEXT)
+    val smokeTime = ObservableField<String>(INIT_TEXT)
 
     var isStartSMokeDayCheck: Boolean = false
     var isStartSmokeHourCheck: Boolean = false
     var isSmokeCountCheck: Boolean = false
     var isSmokeTimeCheck: Boolean = false
-
     var isActiveButton = MutableLiveData<Boolean>().apply {
         this.value = false
     }
+
+    val viewModel: UserRegisterViewModel = UserRegisterViewModel.getInstance()
 
     private fun checkAllUserInfo() : Boolean {
         return isStartSMokeDayCheck && isStartSmokeHourCheck && isSmokeCountCheck && isSmokeTimeCheck
@@ -205,6 +219,7 @@ class SmokeInfoViewModel : BaseViewModel() {
     }
 
     fun moveNextActivity(view: View) {
+
         val context: Context = view.context
         val intent = Intent(context, MainActivity::class.java)
         context.startActivity(intent)

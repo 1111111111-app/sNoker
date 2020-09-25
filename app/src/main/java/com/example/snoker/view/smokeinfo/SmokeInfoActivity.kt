@@ -23,7 +23,7 @@ class SmokeInfoActivity : BaseActivity<ActivitySmokeInfoBinding, SmokeInfoViewMo
     override val layoutResourceId: Int
         get() = R.layout.activity_smoke_info
 
-    override val viewModel: SmokeInfoViewModel = SmokeInfoViewModel()
+    override val viewModel: SmokeInfoViewModel = SmokeInfoViewModel.getInstance()
 
     override fun initStartView() {
     }

@@ -15,18 +15,28 @@ import com.example.snoker.view.smokeinfo.SmokeInfoActivity
 import java.util.*
 
 class UserRegisterViewModel : BaseViewModel() {
+
+    companion object {
+        private var instance: UserRegisterViewModel? = null
+        fun getInstance() = instance ?: synchronized(UserRegisterViewModel::class.java) {
+            instance ?: UserRegisterViewModel().also { instance = it }
+        }
+    }
+
     private val TAG = "UserRegisterActivity"
+    private val INIT_TEXT = "선택"
+
     private var birthdayCalendar = Calendar.getInstance()
     private var stopSmokeCalendar = Calendar.getInstance()
 
-    val birthdayYear = ObservableField<String>("선택")
-    val birthdayMonth = ObservableField<String>("선택")
-    val birthdayDay = ObservableField<String>("선택")
+    val birthdayYear = ObservableField<String>(INIT_TEXT)
+    val birthdayMonth = ObservableField<String>(INIT_TEXT)
+    val birthdayDay = ObservableField<String>(INIT_TEXT)
 
-    val stopSmokeYear = ObservableField<String>("선택")
-    val stopSmokeMonth = ObservableField<String>("선택")
-    val stopSmokeDay = ObservableField<String>("선택")
-    val stopSmokeHour = ObservableField<String>("선택")
+    val stopSmokeYear = ObservableField<String>(INIT_TEXT)
+    val stopSmokeMonth = ObservableField<String>(INIT_TEXT)
+    val stopSmokeDay = ObservableField<String>(INIT_TEXT)
+    val stopSmokeHour = ObservableField<String>(INIT_TEXT)
 
     var isBirthDayCheck: Boolean = false
     var isStopSMokeDayCheck: Boolean = false
