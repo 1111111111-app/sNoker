@@ -12,19 +12,361 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#4068CF"
-        android:gravity="center"
+        android:background="#f4f4f4"
         tools:context=".MyPageFragment">
 
-        <TextView
+        <ImageView
+            android:id="@+id/logoImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="36sp"
-            android:text="마이페이지"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/logo_11"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/noto_sans_kr_bold"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0dp"
+            android:textSize="17sp"
+            android:textColor="#3c3c3c"
+            android:letterSpacing="-0.06"
+            android:text="내 닉네임 "
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/myNickNameText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rectangle_3_copy"
+            android:fontFamily="@font/noto_sans_kr_bold"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0dp"
+            android:textSize="17sp"
+            android:textColor="#3c3c3c"
+            android:letterSpacing="-0.06"
+            android:gravity="center"
+            android:text="분당요정"
+            app:layout_constraintEnd_toEndOf="@+id/logoImage"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <ImageView
+            android:id="@+id/changeNickNameImage"
+            android:layout_width="25dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/chevron_right"
+            app:layout_constraintBottom_toBottomOf="@+id/myNickNameText"
+            app:layout_constraintEnd_toEndOf="@+id/myNickNameText"
+            app:layout_constraintTop_toTopOf="@+id/myNickNameText" />
+
+        <ImageView
+            android:id="@+id/myPostImage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rectangle_6_copy_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/myNickNameText" />
+
+        <TextView
+            android:id="@+id/myPostText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:fontFamily="@font/noto_sans_kr_medium"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0dp"
+            android:textSize="15sp"
+            android:textColor="#3c3c3c"
+            android:letterSpacing="-0.06"
+            android:text="내가 쓴 글 관리"
+            app:layout_constraintBottom_toBottomOf="@+id/myPostImage"
+            app:layout_constraintStart_toStartOf="@+id/myPostImage"
+            app:layout_constraintTop_toTopOf="@+id/myPostImage" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/myPostImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/myPostImage"
+            app:srcCompat="@drawable/chevron_right" />
+
+        <TextView
+            android:id="@+id/profileText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/noto_sans_kr_bold"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.06"
+            android:lineSpacingExtra="0dp"
+            android:text="프로필"
+            android:textColor="#3c3c3c"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toTopOf="@+id/genderImage"
+            app:layout_constraintStart_toStartOf="@+id/myPostText"
+            app:layout_constraintTop_toBottomOf="@+id/myPostImage" />
+
+        <ImageView
+            android:id="@+id/genderImage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-2dp"
+            android:background="@drawable/rectangle_6"
+            app:layout_constraintBottom_toTopOf="@+id/birthImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/birthImage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-2dp"
+            android:background="@drawable/rectangle_6"
+            app:layout_constraintBottom_toTopOf="@+id/startSmokeImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/startSmokeImage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-2dp"
+            android:background="@drawable/rectangle_6"
+            app:layout_constraintBottom_toTopOf="@+id/countSmokeImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/countSmokeImage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-2dp"
+            android:background="@drawable/rectangle_6"
+            app:layout_constraintBottom_toTopOf="@+id/timeSmokeImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/timeSmokeImage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-2dp"
+            android:background="@drawable/rectangle_6"
+            app:layout_constraintBottom_toTopOf="@+id/stopSmokeImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/stopSmokeImage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_6"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/genderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_kr_medium"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.06"
+            android:lineSpacingExtra="0dp"
+            android:text="성별"
+            android:textColor="#3c3c3c"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/genderImage"
+            app:layout_constraintStart_toStartOf="@+id/profileText"
+            app:layout_constraintTop_toTopOf="@+id/genderImage" />
+
+        <TextView
+            android:id="@+id/birthdayText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_kr_medium"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.06"
+            android:lineSpacingExtra="0dp"
+            android:text="생일"
+            android:textColor="#3c3c3c"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/birthImage"
+            app:layout_constraintStart_toStartOf="@+id/profileText"
+            app:layout_constraintTop_toTopOf="@+id/birthImage" />
+
+        <TextView
+            android:id="@+id/startSmokeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_kr_medium"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.06"
+            android:lineSpacingExtra="0dp"
+            android:text="흡연 시작"
+            android:textColor="#3c3c3c"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/startSmokeImage"
+            app:layout_constraintStart_toStartOf="@+id/profileText"
+            app:layout_constraintTop_toTopOf="@+id/startSmokeImage" />
+
+        <TextView
+            android:id="@+id/countSmokeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_kr_medium"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.06"
+            android:lineSpacingExtra="0dp"
+            android:text="하루 흡연량"
+            android:textColor="#3c3c3c"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/countSmokeImage"
+            app:layout_constraintStart_toStartOf="@+id/profileText"
+            app:layout_constraintTop_toTopOf="@+id/countSmokeImage" />
+
+        <TextView
+            android:id="@+id/timeSmokeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_kr_medium"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.06"
+            android:lineSpacingExtra="0dp"
+            android:text="평균 흡연 시간"
+            android:textColor="#3c3c3c"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/timeSmokeImage"
+            app:layout_constraintStart_toStartOf="@+id/profileText"
+            app:layout_constraintTop_toTopOf="@+id/timeSmokeImage" />
+
+        <TextView
+            android:id="@+id/stopSmokeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_kr_medium"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.06"
+            android:lineSpacingExtra="0dp"
+            android:text="금연 시작"
+            android:textColor="#3c3c3c"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/stopSmokeImage"
+            app:layout_constraintStart_toStartOf="@+id/profileText"
+            app:layout_constraintTop_toTopOf="@+id/stopSmokeImage" />
+
+        <TextView
+            android:id="@+id/myGenderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.06"
+            android:lineSpacingExtra="0dp"
+            android:text="여성"
+            android:textColor="#3c3c3c"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/genderImage"
+            app:layout_constraintStart_toEndOf="@+id/myPostText"
+            app:layout_constraintTop_toTopOf="@+id/genderImage" />
+
+        <TextView
+            android:id="@+id/myBirthdayText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.06"
+            android:lineSpacingExtra="0dp"
+            android:text="1993년 9월 11일"
+            android:textColor="#3c3c3c"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/birthImage"
+            app:layout_constraintStart_toStartOf="@+id/myGenderText"
+            app:layout_constraintTop_toTopOf="@+id/birthImage" />
+
+        <TextView
+            android:id="@+id/myStartSmokeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.06"
+            android:lineSpacingExtra="0dp"
+            android:text="2014년 5월 1일"
+            android:textColor="#3c3c3c"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/startSmokeImage"
+            app:layout_constraintStart_toStartOf="@+id/myGenderText"
+            app:layout_constraintTop_toTopOf="@+id/startSmokeImage" />
+
+        <TextView
+            android:id="@+id/myCountSmokeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.06"
+            android:lineSpacingExtra="0dp"
+            android:text="8개비"
+            android:textColor="#3c3c3c"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/countSmokeImage"
+            app:layout_constraintStart_toStartOf="@+id/myGenderText"
+            app:layout_constraintTop_toTopOf="@+id/countSmokeImage" />
+
+        <TextView
+            android:id="@+id/myTimeSmokeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.06"
+            android:lineSpacingExtra="0dp"
+            android:text="7분"
+            android:textColor="#3c3c3c"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/timeSmokeImage"
+            app:layout_constraintStart_toStartOf="@+id/myGenderText"
+            app:layout_constraintTop_toTopOf="@+id/timeSmokeImage" />
+
+        <TextView
+            android:id="@+id/myStopSmokeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_kr_regular"
+            android:includeFontPadding="false"
+            android:letterSpacing="-0.06"
+            android:lineSpacingExtra="0dp"
+            android:text="2020년 5월 14일 1시"
+            android:textColor="#3c3c3c"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/stopSmokeImage"
+            app:layout_constraintStart_toStartOf="@+id/myGenderText"
+            app:layout_constraintTop_toTopOf="@+id/stopSmokeImage" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

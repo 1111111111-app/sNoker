@@ -5,7 +5,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.snoker.R
 import kotlinx.android.synthetic.main.post_list_item.view.*
-import kotlinx.android.synthetic.main.search_list_item.view.*
 
 class PostListAdapter : RecyclerView.Adapter<PostListAdapter.PostViewHolder>() {
     //items MutableList, MutableList는 item을 추가할 수 있다.
@@ -44,7 +43,7 @@ class PostListAdapter : RecyclerView.Adapter<PostListAdapter.PostViewHolder>() {
     }
     inner class PostViewHolder(parent: ViewGroup) : RecyclerView.ViewHolder(
         LayoutInflater.from(parent.context).inflate(R.layout.post_list_item, parent, false)) {
-        val userNickName = itemView.userNickNameText
+        val userNickName = itemView.myNickNameText
         val postText = itemView.postText
         val createdAt = itemView.createAtText
         val smokingBan = itemView.smoingBanText

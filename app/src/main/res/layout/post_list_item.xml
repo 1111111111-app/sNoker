@@ -38,7 +38,7 @@
         app:layout_constraintTop_toTopOf="@+id/talkBoxText" />
 
     <TextView
-        android:id="@+id/userNickNameText"
+        android:id="@+id/myNickNameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -68,7 +68,7 @@
         android:text="오늘"
         android:textColor="#3c3c3c"
         android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="@+id/userNickNameText"
+        app:layout_constraintBottom_toBottomOf="@+id/myNickNameText"
         app:layout_constraintEnd_toEndOf="@+id/talkBoxText" />
 
     <ImageView
@@ -79,7 +79,7 @@
         android:background="@drawable/line"
         app:layout_constraintEnd_toEndOf="@+id/createAtText"
         app:layout_constraintStart_toStartOf="@+id/smoingBanText"
-        app:layout_constraintTop_toBottomOf="@+id/userNickNameText" />
+        app:layout_constraintTop_toBottomOf="@+id/myNickNameText" />
 
     <TextView
         android:id="@+id/postText"

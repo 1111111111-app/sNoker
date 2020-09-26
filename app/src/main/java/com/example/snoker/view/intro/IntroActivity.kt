@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.snoker.R
+import com.example.snoker.view.main.MainActivity
 import com.example.snoker.view.register.UserRegisterActivity
 import kotlinx.android.synthetic.main.activity_intro.*
 //test
@@ -14,7 +15,7 @@ class IntroActivity : AppCompatActivity() {
         setContentView(R.layout.activity_intro)
 
         nextButton.setOnClickListener { view ->
-            val intent = Intent(applicationContext, UserRegisterActivity::class.java)
+            val intent = Intent(applicationContext, MainActivity::class.java)
             startActivity(intent)
         }
     }

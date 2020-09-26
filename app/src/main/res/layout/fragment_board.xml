@@ -124,7 +124,7 @@
             app:layout_constraintTop_toBottomOf="@+id/postList" />
 
         <TextView
-            android:id="@+id/userNickNameText"
+            android:id="@+id/myNickNameText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -149,7 +149,7 @@
             android:background="@drawable/line_color"
             app:layout_constraintEnd_toEndOf="@+id/userTalkBoxText"
             app:layout_constraintStart_toStartOf="@+id/userSmokingBanText"
-            app:layout_constraintTop_toBottomOf="@+id/userNickNameText" />
+            app:layout_constraintTop_toBottomOf="@+id/myNickNameText" />
 
         <EditText
             android:id="@+id/userTypeText"
