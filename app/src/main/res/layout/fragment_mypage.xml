@@ -100,7 +100,7 @@
             app:layout_constraintTop_toTopOf="@+id/myPostImage" />
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/changePostImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="24dp"
@@ -108,7 +108,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/myPostImage"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/myPostImage"
-            app:srcCompat="@drawable/chevron_right" />
+            android:background="@drawable/chevron_right" />
 
         <TextView
             android:id="@+id/profileText"
@@ -367,6 +367,72 @@
             app:layout_constraintBottom_toBottomOf="@+id/stopSmokeImage"
             app:layout_constraintStart_toStartOf="@+id/myGenderText"
             app:layout_constraintTop_toTopOf="@+id/stopSmokeImage" />
+
+        <ImageView
+            android:id="@+id/changeGenderImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/genderImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/genderImage"
+            android:background="@drawable/chevron_right" />
+
+        <ImageView
+            android:id="@+id/changeBirthImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/birthImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/birthImage"
+            android:background="@drawable/chevron_right" />
+
+        <ImageView
+            android:id="@+id/changeStartSmokeImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/startSmokeImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/startSmokeImage"
+            android:background="@drawable/chevron_right" />
+
+        <ImageView
+            android:id="@+id/changeCountSmokeImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/countSmokeImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/countSmokeImage"
+            android:background="@drawable/chevron_right" />
+
+        <ImageView
+            android:id="@+id/changeTimeSmokeImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/timeSmokeImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/timeSmokeImage"
+            android:background="@drawable/chevron_right" />
+
+        <ImageView
+            android:id="@+id/changeStopSmokeImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/stopSmokeImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/stopSmokeImage"
+            android:background="@drawable/chevron_right" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
