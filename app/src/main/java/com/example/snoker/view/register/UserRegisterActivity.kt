@@ -36,7 +36,7 @@ class UserRegisterActivity : BaseActivity<ActivityUserRegisterBinding, UserRegis
     override val layoutResourceId: Int
         get() = R.layout.activity_user_register
 
-    override val viewModel: UserRegisterViewModel = UserRegisterViewModel()
+    override val viewModel: UserRegisterViewModel = UserRegisterViewModel.getInstance()
 
     override fun initStartView() {
     }
